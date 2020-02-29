@@ -13,13 +13,10 @@ namespace TariffCompare.Controllers
     [Route("api/tariff")]
     public class TariffController : ControllerBase
     {
-
-        private readonly ILogger<TariffController> _logger;
         private readonly ITariffService _tariffService;
 
-        public TariffController(ILogger<TariffController> logger, ITariffService tariffService)
+        public TariffController(ITariffService tariffService)
         {
-            _logger = logger;
             _tariffService = tariffService;
         }
 

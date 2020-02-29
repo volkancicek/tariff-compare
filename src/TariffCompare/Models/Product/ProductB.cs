@@ -4,7 +4,7 @@
     {
         public ProductB()
         {
-            this.Name = "“Packaged tariff";
+            Name = "“Packaged tariff";
         }
         public override int CalculateCost(int consumption)
         {

@@ -2,15 +2,15 @@
 {
     public class ProductA : ProductBase
     {
+        private const int BaseCost = 12 * 5;
         public ProductA()
         {
-            this.Name = "basic electricity tariff";
+            Name = "basic electricity tariff";
         }
 
         public override int CalculateCost(int consumption)
         {
-            var baseCost = 12 * 5;
-            return baseCost + (consumption * 22 / 100);
+            return BaseCost + (consumption * 22 / 100);
         }
     }
 }

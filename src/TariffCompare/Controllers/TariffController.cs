@@ -27,7 +27,7 @@ namespace TariffCompare.Controllers
         [Route("{consumption:int}")]
         public IEnumerable<TariffModel> Get(int consumption)
         {
-            var result = _tariffService.CompareTariffs(consumption);
+            var result = _tariffService.GetTariffs(consumption);
             foreach (var product in result.OrderBy(p => p.AnnualCost))
             {
                 yield return product;

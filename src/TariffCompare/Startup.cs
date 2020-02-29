@@ -21,6 +21,7 @@ namespace TariffCompare
         {
             services.AddControllers();
             services.AddTransient<ITariffService, TariffService>();
+            services.AddSingleton<IProductService, ProductService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

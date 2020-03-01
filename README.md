@@ -16,11 +16,11 @@ A web API with ASP.NET Core 3.1.
     `dotnet run`
 
     Application will be running at:
-    <http://localhost:<DEFAULT_PORT>
+    <http://localhost:5001
 
 
 # Swagger UI
-Basic information about the API endpoints can be found at the Swagger UI which is available with default url.
+Basic information about the API endpoints can be found at the Swagger UI.
 <http://localhost:5001>
 
 Enpoints:

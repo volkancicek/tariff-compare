@@ -4,6 +4,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using TariffCompare.Services;
+using Microsoft.OpenApi.Models;
+
 
 namespace TariffCompare
 {
@@ -20,6 +22,11 @@ namespace TariffCompare
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            // Register the Swagger generator, defining 1 or more Swagger documents
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Tariff Compare API", Version = "v1" });
+            });
             services.AddTransient<ITariffService, TariffService>();
             services.AddSingleton<IProductService, ProductService>();
         }
@@ -41,6 +48,17 @@ namespace TariffCompare
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+            });
+
+            // Enable middleware to serve generated Swagger as a JSON endpoint.
+            app.UseSwagger();
+
+            // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
+            // specifying the Swagger JSON endpoint.
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Tariff Compare V1");
+                c.RoutePrefix = string.Empty;
             });
         }
     }

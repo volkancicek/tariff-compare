@@ -1,5 +1,5 @@
 # Tariff Compare
-An ASP.NET Core 3.1 Web API project.
+A web API with ASP.NET Core 3.1.
 
 # Build & Run
 

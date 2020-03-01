@@ -9,15 +9,11 @@ A web API with ASP.NET Core 3.1.
 
 * With .net Command
 
-    At the directory `src/TariffCompare` run the following commands:
+    Run the following commands at the directory `src/TariffCompare` :
 
     `dotnet build`
 
     `dotnet run`
-
-    Application will be running at:
-    <http://localhost:5001
-
 
 # Swagger UI
 Basic information about the API endpoints can be found at the Swagger UI.
